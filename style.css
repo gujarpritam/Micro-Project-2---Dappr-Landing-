@@ -7,6 +7,9 @@
 
 /* navbar design */
 nav {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -36,15 +39,17 @@ ul {
 li {
     box-sizing: border-box;
     margin: 15px 28px;
-    font-size: large;
+    font-size: larger;
 }
 
 input {
+    width: 200px;
     height: 118%;
     position: relative;
     top: 24px;
     border-radius: 37px;
     border: none;
+    padding-left: 10px;
 }
 
 li.search img {
@@ -67,10 +72,6 @@ nav>img {
     top: 13px;
 }
 
-/* .section>div:nth-child(3) {
-    right: 0px;
-} */
-
 .root>img {
     position: fixed;
     bottom: 10px;
@@ -79,34 +80,12 @@ nav>img {
     width: 110px;
 }
 
-/* .root {
-    display: flow-root;
-} */
 
-
-
-.links {
-    /* position: sticky; */
-    /* top: 170px;
-    height: 100%;
-    width: 100%; */
+.container {
+    width: 100%;
+    display: flex;
+    align-items: start;
 }
-
-/* .root div:nth-child(1) {
-    position: sticky;
-    top: 15px;
-
-}
-
-.root div:nth-child(2) {
-    position: sticky;
-    top: 150;
-}
-
-.root div:nth-child(3) {
-    position: sticky;
-    top: 225;
-} */
 
 /* section */
 .section {
@@ -124,16 +103,21 @@ nav>img {
 }
 
 .section .card img {
+    border-radius: 12px;
+    position: relative;
+    top: 0px;
+    z-index: -1;
     height: 100%;
     width: 100%;
-    box-shadow: 4px 7px 32px 0px #00000070;
+    box-shadow: 3px 10px 13px 1px #00000070;
 }
 
 .section div.text {
+    overflow: hidden;
     box-sizing: border-box;
     padding: 20px;
     position: relative;
-    width: 975px;
+    width: 960px;
     height: 100%;
     top: 0px;
     left: 45px;
@@ -152,16 +136,25 @@ nav>img {
 }
 
 .links {
-    position: sticky;
-    top: 40px;
-
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 60px;
+    height: 1350px;
+    width: 110px;
 }
 
-div.links img {}
+.links div {
+    height: 180px;
+    width: 100%;
+    margin: 200px 0px;
+    position: sticky;
+    top: 90px;
+    right: 60px;
+}
+
+div.links img {
+    right: 5px;
+    height: 33.33%;
+    width: 100%;
+}
+
 
 .section2 {
     display: flex;
@@ -216,6 +209,7 @@ div.links img {}
     display: flex;
     flex-direction: column;
     background: #483EFF;
+    border-radius: 27px;
 }
 
 .section3 div button:first-child {
